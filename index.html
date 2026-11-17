@@ -237,7 +237,7 @@ figure.meny{margin-top:1rem}
    <div>
     <p class='etikett'>Arbetssätt</p>
     <h2>Så har jag arbetat</h2>
-    <p>Projekten har ingen projektgrupp. Jag bestämmer vad som ska byggas, i vilken ordning och när det släpps.</p><p>Koden skrivs till största delen av AI-kodagenter som jag styr. En huvudagent fördelar arbetet, och byggarna får avgränsade uppdrag på egna grenar i git. En oberoende granskare, en annan modell i en egen session, läser exakt den commit som ska ut. Underkänner den går arbetet tillbaka till byggaren.</p><p>Min del är kraven, prioriteringen, arkitekturen och besluten om betalningar och avtal. Jag provar på riktiga telefoner och säger ja eller nej till varje publicering. Under varje projekt står vad jag själv har ansvarat för.</p>
+    <p>Projekten har ingen projektgrupp. Jag bestämmer vad som ska byggas, i vilken ordning och när det släpps.</p><p>Koden skrivs till största delen av AI-kodagenter som jag styr. En huvudagent fördelar arbetet, och byggarna får avgränsade uppdrag på egna grenar i git. En oberoende granskare i en egen session, som inte har sett hur koden kom till, läser exakt den commit som ska ut. Underkänner den går arbetet tillbaka till byggaren.</p><p>Min del är kraven, prioriteringen, arkitekturen och besluten om betalningar och avtal. Jag provar på riktiga telefoner och säger ja eller nej till varje publicering. Under varje projekt står vad jag själv har ansvarat för.</p>
    </div>
    <nav class='projektlista' aria-label='Projekten'>
     <a class='kort projektkort' href='#projekt-1'><span class='nr'>1</span><span><b>Klubbförsäljnings mobilapp</b><br>React Native och Expo, App Store och Google Play</span></a>
@@ -246,7 +246,7 @@ figure.meny{margin-top:1rem}
    </nav>
   </div>
   <h3 class='underrubrik'>Vägen för varje ändring</h3>
-  <ol class='steg fem'><li><span class='nr'>1</span><span>Jag ställer kravet</span></li><li><span class='nr'>2</span><span>En byggare gör det på en egen gren</span></li><li><span class='nr'>3</span><span>En annan modell granskar exakt den commit</span></li><li><span class='nr'>4</span><span>Prov i tre webbläsare och på riktiga telefoner</span></li><li><span class='nr'>5</span><span>Jag säger ja och det publiceras</span></li></ol>
+  <ol class='steg fem'><li><span class='nr'>1</span><span>Jag ställer kravet</span></li><li><span class='nr'>2</span><span>En byggare gör det på en egen gren</span></li><li><span class='nr'>3</span><span>En oberoende granskare läser exakt den commit</span></li><li><span class='nr'>4</span><span>Prov i tre webbläsare och på riktiga telefoner</span></li><li><span class='nr'>5</span><span>Jag säger ja och det publiceras</span></li></ol>
  </div>
 </section>
 
@@ -259,7 +259,7 @@ figure.meny{margin-top:1rem}
     <h2>Klubbförsäljning i mobilen</h2>
     <p class='lead'>Lag, föreningar och skolklasser säljer varor för att få in pengar till kassan. I appen registrerar säljaren sina order, delar sin länk och följer topplistan. Lagledaren ser ordrarna, produkterna och säljarna och lägger lagets beställning.</p>
    </div>
-   <dl class='fakta'><div><dt>Teknik</dt><dd>React Native och Expo med TypeScript. En kodbas för iPhone och Android.</dd></div><div><dt>Ute</dt><dd>Google Play sedan 11 oktober 2026, App Store sedan tidigare. Rättelser går ut som OTA.</dd></div><div><dt>Min del</dt><dd>Krav och flöden, styrning och granskning av agenterna, prov på riktiga telefoner, inskick till butikerna och beslut om varje uppdatering.</dd></div></dl>
+   <dl class='fakta'><div><dt>Teknik</dt><dd>React Native och Expo med TypeScript. En kodbas för iPhone och Android.</dd></div><div><dt>Ute</dt><dd>App Store sedan 9 oktober 2026, Google Play sedan 11 oktober 2026. Rättelser går ut som OTA.</dd></div><div><dt>Min del</dt><dd>Krav och flöden, styrning och granskning av agenterna, prov på riktiga telefoner, inskick till butikerna och beslut om varje uppdatering.</dd></div></dl>
   </div>
 
   <h3 class='underrubrik'>Lagledarens och säljarens vyer</h3>
@@ -320,8 +320,8 @@ figure.meny{margin-top:1rem}
   </article>
 
   <article class='kort milstolpe bred-media'>
- <div class='ms-text'><p class='etikett'>Företaget</p><h3>Admin och CRM</h3><p>För företagets eget säljarbete finns en administrationsdel med ordrar, lag, ekonomi och ett CRM. CRM:et med att göra-lista, säljtratt och kundlista är i drift sedan november 2026.</p><p>Bilden visar nästa steg, kallistorna, som är byggda men inte släppta. Skolor och föreningar hämtas ur öppna register. En säljare tar en post och blir dess ägare, och då hamnar den i säljtratten.</p><p class='bildtext'>Skolorna i bilden är provdata.</p></div>
- <div class='ms-media'><figure><img class='skarm' src='bilder/webb-crm.png' alt='CRM med kallistor filtrerade på län och skolform' width='1800' height='1031' loading='lazy' decoding='async'></figure></div>
+ <div class='ms-text'><p class='etikett'>Företaget</p><h3>Admin och CRM</h3><p>För företagets eget säljarbete finns en administrationsdel med ordrar, lag, ekonomi och ett CRM. CRM:et med att göra-lista, säljtratt och kundlista är i drift sedan november 2026.</p><p>Bilden visar nästa steg, de kalla listorna, som är byggda men inte släppta. Skolor och föreningar hämtas ur öppna register. En säljare tar en post och blir dess ägare, och då hamnar den i säljtratten.</p><p class='bildtext'>Skolorna i bilden är provdata.</p></div>
+ <div class='ms-media'><figure><img class='skarm' src='bilder/webb-crm.png' alt='CRM med kalla listor filtrerade på län och skolform' width='1800' height='1031' loading='lazy' decoding='async'></figure></div>
 </article>
 
   <article class='kort milstolpe '>
@@ -380,7 +380,7 @@ figure.meny{margin-top:1rem}
   </article>
 
   <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 3, teknikval</p><h3>Inställningarna fick en egen plats i navigeringen</h3><p>Kugghjulet på Hem svarade inte i appen. Orsaken var samma ändring i expo-router 58 som gav felet i Klubbförsäljnings version 1.0.4.</p><p>Alternativen var att göra Inställningar till en dold flik, som i Klubbförsäljning, eller att flytta den till appens rotnavigering. Jag valde rotnavigeringen. En dold flik hade gett fel bakåtsteg på Android och en fel flikrad på surfplattor, och vyn var redan byggd som en detaljvy.</p><p>Ett nytt prov kör routern i Node och fäller den gamla koden.</p></div>
+ <div class='ms-text'><p class='etikett'>Milstolpe 3, teknikval</p><h3>Inställningarna fick en egen plats i navigeringen</h3><p>Kugghjulet på Hem svarade inte i appen. Orsaken var samma ändring i expo-router 58 som gav felet i Klubbförsäljnings version 1.0.4.</p><p>Alternativen var att göra Inställningar till en dold flik, som i Klubbförsäljning, eller att flytta den till appens rotnavigering. Jag valde rotnavigeringen. En dold flik hade gett fel bakåtsteg på Android och en felaktig flikrad på surfplattor, och vyn var redan byggd som en detaljvy.</p><p>Ett nytt prov kör routern i Node och fäller den gamla koden.</p></div>
  <div class='ms-media'><div class='galleri tel-par'><figure><img class='tel' src='bilder/kh-kugg-fore.png' alt='Hem där kugghjulet inte svarade' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Före: kugghjulet uppe till höger leder ingenstans.</figcaption></figure><figure><img class='tel' src='bilder/kh-inst-efter.png' alt='Inställningarna öppnas' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Efter: Inställningar öppnas. Kontots adress är dold.</figcaption></figure></div></div>
 </article>
   </div>
