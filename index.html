@@ -4,7 +4,7 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Carlo Juric, portfolio</title>
-<meta name='description' content='Carlo Juric. Portfolio med tre projekt: Klubbförsäljnings mobilapp och webbapp samt Klubbhantering.'>
+<meta name='description' content='Carlo Juric. Portfolio med fyra projekt: Klubbförsäljnings mobilapp och webbapp, Klubbhantering och Nästa pass.'>
 <meta name='theme-color' content='#16a34a'>
 <link rel='preload' as='font' type='font/woff2' href='typsnitt/plus-jakarta-sans-latin.woff2' crossorigin>
 <style>
@@ -129,6 +129,7 @@ figure.meny{margin-top:1rem}
 
 /* milstolpar */
 .milstolpar{display:grid;gap:1.5rem;margin-top:3rem}
+.np-bild{max-width:300px;justify-self:center;width:100%}
 .milstolpe{display:grid;gap:1.75rem}
 .milstolpe h3{margin-bottom:.25rem}
 .ms-media{min-width:0}
@@ -204,7 +205,7 @@ figure.meny{margin-top:1rem}
  <div class='wrap topp-rad'>
   <a class='ordmark' href='#top'>Carlo Juric</a>
   <nav aria-label='Innehåll'>
-   <a href='#arbetssatt'>Arbetssätt</a><a href='#projekt-1'>Mobilappen</a><a href='#projekt-2'>Webbappen</a><a href='#projekt-3'>Klubbhantering</a>
+   <a href='#arbetssatt'>Arbetssätt</a><a href='#projekt-1'>Mobilappen</a><a href='#projekt-2'>Webbappen</a><a href='#projekt-3'>Klubbhantering</a><a href='#projekt-4'>Nästa pass</a>
   </nav>
  </div>
 </header>
@@ -216,7 +217,7 @@ figure.meny{margin-top:1rem}
   <div class='hero-text'>
    <p class='bricka'>Portfolio</p>
    <h1>Carlo Juric</h1>
-   <p class='lead'>Tre projekt som jag har lett från idé till drift: en app för iPhone och Android, en webbapp med kassa och CRM, och ett system för idrottsföreningar.</p>
+   <p class='lead'>Fyra projekt. Tre har jag lett från idé till drift: en app för iPhone och Android, en webbapp med kassa och CRM, och ett system för idrottsföreningar. Det fjärde är mitt examensarbete, en Android-app i Kotlin.</p>
    <p class='meta'>Programmering iPhone och Android, Malmö Yrkeshögskola. Examen 24 november 2026.</p>
    <div class='knappar'>
     <a class='knapp knapp-gron' href='#projekt-1'>Se projekten</a>
@@ -243,6 +244,7 @@ figure.meny{margin-top:1rem}
     <a class='kort projektkort' href='#projekt-1'><span class='nr'>1</span><span><b>Klubbförsäljnings mobilapp</b><br>React Native och Expo, App Store och Google Play</span></a>
     <a class='kort projektkort' href='#projekt-2'><span class='nr'>2</span><span><b>Klubbförsäljnings webbapp</b><br>React, TypeScript och Supabase, med kassa och CRM</span></a>
     <a class='kort projektkort' href='#projekt-3'><span class='nr'>3</span><span><b>Klubbhantering</b><br>Webb och app för idrottsföreningar</span></a>
+    <a class='kort projektkort' href='#projekt-4'><span class='nr'>4</span><span><b>Nästa pass</b><br>Kotlin och Jetpack Compose, examensarbetet</span></a>
    </nav>
   </div>
   <h3 class='underrubrik'>Vägen för varje ändring</h3>
@@ -346,7 +348,7 @@ figure.meny{margin-top:1rem}
     <h2>Klubbhantering</h2>
     <p class='lead'>Ett system för idrottsföreningar: medlemsregister, lag, kallelser med svar i realtid, kalender, närvaro, fakturor och föreningens egen hemsida.</p>
    </div>
-   <dl class='fakta'><div><dt>Teknik</dt><dd>Next.js och tRPC på webben, Expo i appen, Drizzle och Postgres hos Supabase i ett gemensamt monorepo.</dd></div><div><dt>Ute</dt><dd>Webben på klubbhantering.se sedan 4 oktober 2026. Appen provas på riktiga Android-telefoner och är inte inskickad än.</dd></div><div><dt>Min del</dt><dd>Samma roll som i Klubbförsäljning, och examensarbetet handlar om det här projektet.</dd></div></dl>
+   <dl class='fakta'><div><dt>Teknik</dt><dd>Next.js och tRPC på webben, Expo i appen, Drizzle och Postgres hos Supabase i ett gemensamt monorepo.</dd></div><div><dt>Ute</dt><dd>Webben på klubbhantering.se sedan 4 oktober 2026. Appen provas på riktiga Android-telefoner och är inte inskickad än.</dd></div><div><dt>Min del</dt><dd>Samma roll som i Klubbförsäljning.</dd></div></dl>
   </div>
   <div class='skarmram stor'><figure><img class='skarm' src='bilder/kh-start.png' alt='Startsidan på klubbhantering.se' width='1800' height='975' loading='lazy' decoding='async'><figcaption>Startsidan. Föreningen i exemplet är påhittad.</figcaption></figure></div>
 
@@ -383,6 +385,21 @@ figure.meny{margin-top:1rem}
  <div class='ms-text'><p class='etikett'>Milstolpe 3, teknikval</p><h3>Inställningarna fick en egen plats i navigeringen</h3><p>Kugghjulet på Hem svarade inte i appen. Orsaken var samma ändring i expo-router 58 som gav felet i Klubbförsäljnings version 1.0.4.</p><p>Alternativen var att göra Inställningar till en dold flik, som i Klubbförsäljning, eller att flytta den till appens rotnavigering. Jag valde rotnavigeringen. En dold flik hade gett fel bakåtsteg på Android och en felaktig flikrad på surfplattor, och vyn var redan byggd som en detaljvy.</p><p>Ett nytt prov kör routern i Node och fäller den gamla koden.</p></div>
  <div class='ms-media'><div class='galleri tel-par'><figure><img class='tel' src='bilder/kh-kugg-fore.png' alt='Hem där kugghjulet inte svarade' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Före: kugghjulet uppe till höger leder ingenstans.</figcaption></figure><figure><img class='tel' src='bilder/kh-inst-efter.png' alt='Inställningarna öppnas' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Efter: Inställningar öppnas. Kontots adress är dold.</figcaption></figure></div></div>
 </article>
+  </div>
+ </div>
+</section>
+
+
+<section class='sektion projekt ton' id='projekt-4'>
+ <div class='wrap'>
+  <div class='tva intro'>
+   <div>
+    <p class='etikett'>Projekt 4</p>
+    <h2>Nästa pass</h2>
+    <p class='lead'>En Android-app i Kotlin och Jetpack Compose där spelare och föräldrar svarar på lagets träningar, även utan nät. Byggs 17 till 22 november 2026 och är mitt examensarbete.</p>
+    <dl class='fakta'><div><dt>Teknik</dt><dd>Kotlin och Jetpack Compose, Room som lokal databas, WorkManager för att skicka svaren och en widget i Glance.</dd></div><div><dt>Min del</dt><dd>Samma roll som i de andra projekten.</dd></div></dl>
+   </div>
+   <div class='np-bild'><figure><img class='tel' src='bilder/np-utan-nat.png' alt='Nästa pass utan nät: svaret Kommer är sparat och skickas när nätet är tillbaka' width='640' height='1386' loading='lazy' decoding='async'><figcaption><b>Utan nät.</b> Svaret sparas i telefonen. Bilden är ritad ur appens kod i provmiljön, inte tagen på en telefon. Laget är provdata.</figcaption></figure></div>
   </div>
  </div>
 </section>
