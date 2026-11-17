@@ -121,9 +121,6 @@ dl.fakta dd{margin:0;font-size:.9375rem;line-height:1.5}
 @media (min-width:640px){.tva-bilder{grid-template-columns:1fr 1fr;gap:1.5rem}}
 .tva.jamn .tva-bilder{margin-top:0}
 .fore-efter{grid-template-columns:repeat(2,minmax(0,1fr))}
-.kh-vyer{grid-template-columns:repeat(3,minmax(0,1fr))}
-.kh-vyer .bred{grid-column:1/-1}
-@media (min-width:900px){.kh-vyer{grid-template-columns:2.6fr 1fr 1fr 1fr;align-items:start}.kh-vyer .bred{grid-column:auto}}
 figure.meny{margin-top:1rem}
 @media (max-width:639px){.kh-vyer,.tel-tre{gap:1rem .6rem}.kh-vyer figcaption,.tel-tre figcaption{font-size:.8125rem}}
 
@@ -164,6 +161,31 @@ figure.meny{margin-top:1rem}
 .fot{border-top:1px solid var(--line-soft);padding:1.75rem 0;font-size:.875rem;color:var(--ink-500)}
 .fot-rad{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
 
+
+/* kortad version: status, tekniklinje, kompetenser, milstolpar, bildrader */
+.status{display:inline-flex;margin-left:.5rem;padding:.15rem .7rem;border-radius:9999px;font-size:.8125rem;font-weight:700;vertical-align:1px}
+.status.klar{background:var(--tint);color:var(--green-deep)}
+.status.pagar{background:#fef3c7;color:#854d0e}
+.teknik{margin-top:.6rem;font-weight:700;color:var(--ink);font-size:.9375rem}
+.komp{display:grid;gap:1rem;margin-top:1.5rem}
+@media (min-width:640px){.komp{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.komp{grid-template-columns:repeat(3,1fr);gap:1.25rem}}
+ul.taggar{list-style:none;margin:.75rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
+ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);border:1px solid var(--line-soft);font-size:.875rem;font-weight:600;color:var(--ink)}
+.sektion.ton ul.taggar li{background:#fff}
+.ms-par{display:grid;gap:1rem;margin-top:2rem}
+@media (min-width:768px){.ms-par{grid-template-columns:1fr 1fr;gap:1.25rem}}
+.kort.ms h3{font-size:1.125rem}
+.kort.ms p:last-child{font-size:.9375rem}
+.bilder-tel{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px;margin-top:2rem}
+.np-bilder{grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:end;margin-top:2rem}
+.galleri.tva-bilder{margin-top:1.25rem}
+.kh-vyer{margin-top:1.25rem;grid-template-columns:minmax(0,2.6fr) minmax(0,1fr);align-items:start}
+@media (max-width:639px){.bilder-tel,.np-bilder,.kh-vyer{gap:1rem .6rem}.bilder-tel figcaption,.np-bilder figcaption,.kh-vyer figcaption{font-size:.8125rem}}
+.intro .fakta{align-self:start}
+@media (min-width:900px){.kh-bilder{display:grid;grid-template-columns:1.25fr 1fr;gap:1.5rem;align-items:start}.kh-bilder .kh-vyer{margin-top:1.5rem}}
+.np-bilder{max-width:560px}
+
 /* utskrift, pdf i A4 */
 @page{size:A4;margin:14mm 14mm 16mm}
 @media print{
@@ -177,7 +199,38 @@ figure.meny{margin-top:1rem}
  h1{font-size:34pt}
  .sektion{padding:0;border:0;break-before:page}
  .sektion.ton{background:none}
- #slut{break-before:auto;margin-top:1.5rem}
+ #slut{break-before:auto;margin-top:.75rem}
+ #kompetenser{break-before:auto;margin-top:1.25rem}
+ .komp{grid-template-columns:repeat(3,1fr);gap:.75rem}
+ .ms-par{grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.25rem}
+ .kort.ms,.komp .kort{break-inside:avoid}
+ .kh-vyer{grid-template-columns:2.6fr 1fr}
+ .tva.intro{grid-template-columns:1fr;gap:1rem}
+ .intro dl.fakta{display:grid;grid-template-columns:1fr 1fr;column-gap:1.5rem;padding:.25rem 1.25rem}
+ .intro dl.fakta div{border-bottom:0;grid-template-columns:1fr;gap:.1rem;padding:.6rem 0}
+ .bilder-tel{max-width:330px;margin-top:1rem}
+ .skarmram.stor{max-width:66%}
+ .kh-bilder{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+ .kh-bilder .kh-vyer,#projekt-3 .skarmram.stor{max-width:none}
+ #projekt-2 .tva-bilder{max-width:60%}
+ ul.taggar{gap:.3rem;margin-top:.5rem}
+ ul.taggar li{font-size:8pt;padding:.12rem .55rem}
+ .komp .kort{padding:.7rem .9rem}
+ #kompetenser h2{font-size:20pt}
+ .komp{margin-top:.75rem}
+ .projekt .kort{padding:.8rem 1rem}
+ .ms-par{margin-top:1rem}
+ .projekt p{max-width:none}
+ .projekt .teknik{margin-top:.3rem}
+ .projekt h2{font-size:20pt}
+ .projekt .galleri,.projekt .skarmram.stor{margin-top:.75rem}
+ .np-bilder{max-width:44%;margin-top:.75rem}
+ #slut .slutpanel{padding:1rem 1.25rem}
+ #slut h2{font-size:16pt}
+ #slut .lead{font-size:10pt}
+ #slut .lankar{margin-top:.75rem;padding-top:.75rem}
+ #kompetenser{break-inside:avoid}
+ .hero-bild{height:270px}
  .kort{box-shadow:none;border:1px solid var(--line);padding:1.1rem}
  .skarmram.stor .skarm{box-shadow:none}
  .milstolpar{gap:1rem;margin-top:1.5rem}
@@ -189,7 +242,6 @@ figure.meny{margin-top:1rem}
  .tre{grid-template-columns:repeat(3,1fr)}
  .milstolpe{grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
  .milstolpe.bred-media{grid-template-columns:.85fr 1.3fr}
- .kh-vyer{grid-template-columns:2.6fr 1fr 1fr 1fr;align-items:start}.kh-vyer .bred{grid-column:auto}
  .tel-tre .bred img{max-width:240px}
  .ms-media ol.steg{grid-template-columns:1fr;gap:.4rem}
  .ms-media ol.steg li{flex-direction:row;align-items:center;padding:.5rem .75rem}
@@ -205,7 +257,7 @@ figure.meny{margin-top:1rem}
  <div class='wrap topp-rad'>
   <a class='ordmark' href='#top'>Carlo Juric</a>
   <nav aria-label='Innehåll'>
-   <a href='#arbetssatt'>Arbetssätt</a><a href='#projekt-1'>Mobilappen</a><a href='#projekt-2'>Webbappen</a><a href='#projekt-3'>Klubbhantering</a><a href='#projekt-4'>Nästa pass</a>
+   <a href='#kompetenser'>Kompetenser</a><a href='#projekt-1'>Klubbförsäljning</a><a href='#projekt-3'>Klubbhantering</a><a href='#projekt-4'>Nästa pass</a>
   </nav>
  </div>
 </header>
@@ -217,11 +269,12 @@ figure.meny{margin-top:1rem}
   <div class='hero-text'>
    <p class='bricka'>Portfolio</p>
    <h1>Carlo Juric</h1>
-   <p class='lead'>Fyra projekt. Tre har jag lett från idé till drift: en app för iPhone och Android, en webbapp med kassa och CRM, och ett system för idrottsföreningar. Det fjärde är mitt examensarbete, en Android-app i Kotlin.</p>
+   <p class='lead'>Jag bygger appar och webbtjänster för föreningslivet. Här finns fyra projekt, från app och webb i drift till mitt examensarbete i Kotlin.</p>
+   <p>Jag har arbetat ensam, med AI-kodagenter som har skrivit det mesta av koden medan jag har stått för kraven, arkitekturen, granskningen och proven på riktiga telefoner. I Klubbförsäljning satte jag upp databasens grund, tabellerna och behörigheterna (Row Level Security), för hand, och vägledning har jag fått från API-dokumentationen, Stack Overflow och AI-verktygen.</p>
    <p class='meta'>Programmering iPhone och Android, Malmö Yrkeshögskola. Examen 24 november 2026.</p>
    <div class='knappar'>
     <a class='knapp knapp-gron' href='#projekt-1'>Se projekten</a>
-    <a class='knapp knapp-vit' href='#arbetssatt'>Så har jag arbetat</a>
+    <a class='knapp knapp-vit' href='#kompetenser'>Kompetenser</a>
    </div>
   </div>
   <div class='hero-bild'>
@@ -231,111 +284,38 @@ figure.meny{margin-top:1rem}
  </div>
 </section>
 
-
-<section class='sektion' id='arbetssatt'>
- <div class='wrap'>
-  <div class='tva'>
-   <div>
-    <p class='etikett'>Arbetssätt</p>
-    <h2>Så har jag arbetat</h2>
-    <p>Projekten har ingen projektgrupp. Jag bestämmer vad som ska byggas, i vilken ordning och när det släpps.</p><p>Koden skrivs till största delen av AI-kodagenter som jag styr. En huvudagent fördelar arbetet, och byggarna får avgränsade uppdrag på egna grenar i git. En oberoende granskare i en egen session, som inte har sett hur koden kom till, läser exakt den commit som ska ut. Underkänner den går arbetet tillbaka till byggaren.</p><p>Min del är kraven, prioriteringen, arkitekturen och besluten om betalningar och avtal. I Klubbförsäljning satte jag upp databasens grund, tabellerna och behörigheterna (Row Level Security), för hand. Senare ändringar skrevs som migrationer av agenterna, och dem har jag granskat och kört. Jag provar på riktiga telefoner och säger ja eller nej till varje publicering. Under varje projekt står vad jag själv har ansvarat för.</p><p>Vägledning har jag fått från API-dokumentationen för de verktyg och tjänster jag använder, från Stack Overflow och från AI-verktygen.</p>
-   </div>
-   <nav class='projektlista' aria-label='Projekten'>
-    <a class='kort projektkort' href='#projekt-1'><span class='nr'>1</span><span><b>Klubbförsäljnings mobilapp</b><br>React Native och Expo, App Store och Google Play</span></a>
-    <a class='kort projektkort' href='#projekt-2'><span class='nr'>2</span><span><b>Klubbförsäljnings webbapp</b><br>React, TypeScript och Supabase, med kassa och CRM</span></a>
-    <a class='kort projektkort' href='#projekt-3'><span class='nr'>3</span><span><b>Klubbhantering</b><br>Webb och app för idrottsföreningar</span></a>
-    <a class='kort projektkort' href='#projekt-4'><span class='nr'>4</span><span><b>Nästa pass</b><br>Kotlin och Jetpack Compose, examensarbetet</span></a>
-   </nav>
-  </div>
-  <h3 class='underrubrik'>Vägen för varje ändring</h3>
-  <ol class='steg fem'><li><span class='nr'>1</span><span>Jag ställer kravet</span></li><li><span class='nr'>2</span><span>En byggare gör det på en egen gren</span></li><li><span class='nr'>3</span><span>En oberoende granskare läser exakt den commit</span></li><li><span class='nr'>4</span><span>Prov i tre webbläsare och på riktiga telefoner</span></li><li><span class='nr'>5</span><span>Jag säger ja och det publiceras</span></li></ol>
- </div>
-</section>
-
+<section class='sektion' id='kompetenser'><div class='wrap'><p class='etikett'>Kompetenser</p><h2>Det jag har arbetat med</h2><div class='komp'><div class='kort liten'><h3>Mobilappar</h3><ul class='taggar'><li>React Native</li><li>Expo</li><li>EAS och OTA</li><li>Kotlin</li><li>Jetpack Compose</li><li>Room</li><li>WorkManager</li><li>Glance-widgetar</li></ul></div><div class='kort liten'><h3>Webb</h3><ul class='taggar'><li>React</li><li>TypeScript</li><li>Vite</li><li>Next.js</li><li>tRPC</li></ul></div><div class='kort liten'><h3>Data och server</h3><ul class='taggar'><li>Supabase</li><li>Postgres och SQL</li><li>Row Level Security</li><li>Migrationer</li><li>Drizzle</li><li>Edge Functions i Deno</li></ul></div><div class='kort liten'><h3>Kvalitet</h3><ul class='taggar'><li>Playwright</li><li>Robolectric</li><li>Tillgänglighet (WCAG)</li></ul></div><div class='kort liten'><h3>Verktyg</h3><ul class='taggar'><li>Git och GitHub</li><li>AI-kodagenter</li><li>App Store Connect</li><li>Google Play Console</li><li>Vercel</li></ul></div></div></div></section>
 
 <section class='sektion projekt' id='projekt-1'>
  <div class='wrap'>
   <div class='tva intro'>
    <div>
-    <p class='etikett'>Projekt 1</p>
+    <p class='etikett'>Projekt 1 <span class='status klar'>Slutfört</span></p>
     <h2>Klubbförsäljning i mobilen</h2>
-    <p class='lead'>Lag, föreningar och skolklasser säljer varor för att få in pengar till kassan. I appen registrerar säljaren sina order, delar sin länk och följer topplistan. Lagledaren ser ordrarna, produkterna och säljarna och lägger lagets beställning.</p>
+    <p class='teknik'>React Native · Expo · TypeScript · EAS</p>
+    <p>Lag, föreningar och skolklasser säljer varor för att få in pengar till kassan. I appen registrerar säljaren sina order och följer topplistan, och lagledaren lägger lagets beställning. Rättelser går ut som OTA, utan butikernas granskning.</p>
    </div>
-   <dl class='fakta'><div><dt>Teknik</dt><dd>React Native och Expo med TypeScript. En kodbas för iPhone och Android.</dd></div><div><dt>Ute</dt><dd>App Store sedan 9 oktober 2026, Google Play sedan 11 oktober 2026. Rättelser går ut som OTA.</dd></div><div><dt>Min del</dt><dd>Krav och flöden, styrning och granskning av agenterna, prov på riktiga telefoner, inskick till butikerna och beslut om varje uppdatering.</dd></div></dl>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört. I App Store och Google Play sedan oktober 2026.</dd></div><div><dt>Min del</dt><dd>Krav och flöden, granskning av agenterna, prov på riktiga telefoner och inskick till butikerna.</dd></div></dl>
   </div>
-
-  <h3 class='underrubrik'>Lagledarens och säljarens vyer</h3>
-  <p class='svep-tips'>Svep åt sidan för fler vyer.</p>
-  <div class='galleri tel-galleri svep' tabindex='0' aria-label='Sju vyer ur appen'>
-   <figure><img class='tel' src='bilder/app-saljare-hem.png' alt='Säljarens startvy' width='444' height='932' loading='lazy' decoding='async'><figcaption><b>Säljarens start.</b> Android.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-produkter.png' alt='Lagledarens produktsortiment' width='455' height='990' loading='lazy' decoding='async'><figcaption><b>Lagets produkter.</b> iPhone.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-ordrar.png' alt='Ordrar' width='455' height='990' loading='lazy' decoding='async'><figcaption><b>Ordrar.</b> Alla säljares order, filtrerade på status och period.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-kassan.png' alt='Kassan' width='455' height='990' loading='lazy' decoding='async'><figcaption><b>Kassan.</b> Lagets samlade beställning i två steg.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-klubbpay.png' alt='KLUBB|pay' width='455' height='990' loading='lazy' decoding='async'><figcaption><b>KLUBB|pay.</b> Föreningen tar emot Swish på eget konto.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-topplista.png' alt='Topplistan' width='444' height='932' loading='lazy' decoding='async'><figcaption><b>Topplistan.</b> Lagets vinst och säljarnas placering.</figcaption></figure>
-   <figure><img class='tel' src='bilder/app-material.png' alt='Säljmaterial' width='444' height='932' loading='lazy' decoding='async'><figcaption><b>Säljmaterial.</b> Länk och texter att dela i sociala medier.</figcaption></figure>
-  </div>
-
-  <div class='milstolpar'>
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 1, teknikval</p><h3>En kodbas i stället för två appar</h3><p>Alternativen var två native-appar, Swift för iPhone och Kotlin för Android, eller React Native med Expo.</p><p>Jag valde React Native. Webben var redan skriven i React och TypeScript, så appen kunde dela server, typer och regler med webben, och en ändring kan gå ut på båda plattformarna samma dag.</p><p>Priset är att jag kommer längre från plattformarna. Det jag har gjort nativt är konfigurationen: språk och behörigheter i Info.plist och Android-manifestet, adaptiv ikon, kant till kant och signering.</p></div>
- <div class='ms-media'><div class='galleri tel-par'><figure><img class='tel' src='bilder/app-login-iphone.png' alt='Inloggningen på iPhone' width='455' height='990' loading='lazy' decoding='async'><figcaption>iPhone</figcaption></figure><figure><img class='tel' src='bilder/app-login-android.png' alt='Inloggningen på Android' width='444' height='932' loading='lazy' decoding='async'><figcaption>Android</figcaption></figure></div></div>
-</article>
-
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 2, teknikval</p><h3>Rättelser som OTA, nya funktioner via butiken</h3><p>En butiksversion måste granskas av Apple och Google, och det tar dagar. Med expo-updates kan jag skicka ny JavaScript direkt till telefonerna, nästa gång appen startar.</p><p>En OTA är bunden till appens version, och användarna sitter kvar på äldre versioner. Därför underhåller jag tre linjer samtidigt, och varje rättelse byggs tre gånger. Kanalerna preview och production gör att en uppdatering provas innan den når användarna.</p><p>Regeln som följer med: en ändring på webben som rör säljare eller lagledare ska finnas i appen i samma släpp.</p></div>
- <div class='ms-media'><div class='linjer' role='img' aria-label='Tre versionslinjer som får samma rättelse'><div class='linje'><span class='ver'>1.0.2</span><span class='spar'><i></i><i class='samma'></i><i></i></span><span class='lt'>App Store 9 oktober, Google Play 11 oktober</span></div><div class='linje'><span class='ver'>1.0.3</span><span class='spar'><i></i><i class='samma'></i><i></i></span><span class='lt'></span></div><div class='linje'><span class='ver'>1.0.4</span><span class='spar'><i></i><i class='samma'></i><i></i></span><span class='lt'>Expo SDK 58, november</span></div></div><p class='bildtext'>Varje punkt är en OTA. Den mörka punkten är samma rättelse, byggd tre gånger. Appversionen i butiken avgör vilken linje en telefon får.</p></div>
-</article>
-
-  <article class='kort milstolpe lang'>
- <div class='ms-text'><p class='etikett'>Milstolpe 3, ett misstag som blev en regel</p><h3>Version 1.0.4 gick ut utan att ha startats på en telefon</h3><p>Versionen lyfte Expo från SDK 55 till 58 och skickades till Apple den 6 november med automatiskt släpp. I den nya routern betydde en flikinställning något annat, så appen startade alltid på Beställningar och Byt lag laddade bara om vyn. Inget typfel varnade.</p><p>Jag rättade det med en OTA samma kväll som felet hittades. Regeln sedan dagen efter: ingen version till butikerna förrän den startats på riktig iPhone och Android med en fast lista, och släppet i App Store görs för hand.</p></div>
- <div class='ms-media'><div class='galleri tel-tre'><figure><img class='tel' src='bilder/app-login-se.png' alt='iPhone SE, inloggning' width='418' height='738' loading='lazy' decoding='async'><figcaption>iPhone SE, inloggning</figcaption></figure><figure><img class='tel' src='bilder/app-byt-lag.png' alt='iPhone, Byt lag' width='455' height='990' loading='lazy' decoding='async'><figcaption>iPhone, Byt lag</figcaption></figure><figure><img class='tel' src='bilder/app-ordrar-android.png' alt='Android, ordrar' width='444' height='932' loading='lazy' decoding='async'><figcaption>Android, ordrar</figcaption></figure><figure class='bred'><img class='tel platta' src='bilder/app-platta.png' alt='Surfplatta, liggande' width='956' height='600' loading='lazy' decoding='async'><figcaption>Surfplatta, liggande</figcaption></figure></div></div>
-</article>
-  </div>
+  <div class='galleri bilder-tel'><figure><img class='tel' src='bilder/app-produkter.png' alt='Lagledarens produktsortiment' width='455' height='990' loading='lazy' decoding='async'><figcaption>Produkter, iPhone.</figcaption></figure><figure><img class='tel' src='bilder/app-kassan.png' alt='Kassan' width='455' height='990' loading='lazy' decoding='async'><figcaption>Kassan, iPhone.</figcaption></figure><figure><img class='tel' src='bilder/app-topplista.png' alt='Topplistan' width='444' height='932' loading='lazy' decoding='async'><figcaption>Topplistan, Android.</figcaption></figure></div>
+  <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, teknikval</p><h3>En kodbas i stället för två appar</h3><p>Jag valde React Native med Expo framför Swift och Kotlin, så att appen kunde dela server, typer och regler med webben. Priset är att jag kommer längre från plattformarna.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, ett misstag</p><h3>Version 1.0.4 gick ut utan att ha startats på en telefon</h3><p>Uppgraderingen till Expo SDK 58 ändrade en flikinställning, så att Byt lag slutade fungera. Jag rättade det med en OTA samma kväll, och sedan dess startas varje version på riktig iPhone och Android innan den skickas in.</p></article></div>
  </div>
 </section>
 
 
 <section class='sektion projekt ton' id='projekt-2'>
  <div class='wrap'>
-  <p class='etikett'>Projekt 2</p>
-  <h2>Klubbförsäljning på webben</h2>
-  <div class='skarmram stor'><img class='skarm' src='bilder/webb-start.png' alt='Startsidan på klubbforsaljning.se' width='1440' height='470' loading='lazy' decoding='async'></div>
-  <div class='tre'>
-   <div class='kort liten'><h3>Vad den gör</h3><p>Publik webbplats, panel för lagledare, vyer för säljare, kassan och en administrationsdel med CRM för företaget.</p></div>
-   <div class='kort liten'><h3>Teknik</h3><p>React, TypeScript och Vite. Postgres hos Supabase med radnivåsäkerhet. Serverlogiken i Edge Functions som körs i Deno.</p></div>
-   <div class='kort liten'><h3>Min del</h3><p>Samma roll som i appen, plus besluten om betalningar och avtal. Databasens grund satte jag upp för hand.</p></div>
-  </div>
-
-  <div class='milstolpar'>
-  <article class='kort milstolpe bred-media'>
- <div class='ms-text'><p class='etikett'>Lagledaren</p><h3>Lagledarens panel</h3><p>Panelen har samma delar som appen: produkter, säljare, kampanjinställningar, säljmaterial, topplista, chatt och beställningar.</p><p>Säljmaterialet visar produkterna precis som säljarna ser dem, med pitchar, texter för sociala medier, en orderlista att skriva ut och en Swish QR-kod.</p><p>Webben finns på svenska, engelska och danska.</p><p class='bildtext'>Provlaget i bilden har påhittade uppgifter.</p></div>
- <div class='ms-media'><figure><img class='skarm' src='bilder/webb-panel.png' alt='Säljmaterialet i lagledarens panel' width='1280' height='900' loading='lazy' decoding='async'></figure></div>
-</article>
-
-  <article class='kort'>
-   <p class='etikett'>Betalningar</p><h3>Kassan och KLUBB|pay</h3>
-   <div class='galleri tva-bilder'>
-    <figure><img class='skarm' src='bilder/webb-kassa.png' alt='Kassan med beställningsöversikten' width='1280' height='900' loading='lazy' decoding='async'><figcaption><b>Kassan.</b> Räknar om sålda varor till hela kartonger, visar överskottet och frakten och tar emot lagets beställning. Fakturan betalas efteråt.</figcaption></figure>
-    <figure><img class='skarm' src='bilder/webb-klubbpay.png' alt='Sidan om KLUBB|pay' width='1440' height='628' loading='lazy' decoding='async'><figcaption><b>KLUBB|pay.</b> Kundernas Swish går till föreningens eget konto och betalas ut som en klumpsumma, med en avräkningsnota till kassören. Lagledaren aktiverar med BankID och styrelsen godkänner.</figcaption></figure>
+  <div class='tva intro'>
+   <div>
+    <p class='etikett'>Projekt 2 <span class='status klar'>Slutfört</span></p>
+    <h2>Klubbförsäljning på webben</h2>
+    <p class='teknik'>React · TypeScript · Vite · Supabase · Edge Functions i Deno</p>
+    <p>Webben är den publika webbplatsen, lagledarens panel, säljarnas vyer och kassan. Där finns också KLUBB|pay, där kundernas Swish går till föreningens eget konto, och ett CRM för företaget. Webben finns på svenska, engelska och danska.</p>
    </div>
-  </article>
-
-  <article class='kort milstolpe bred-media'>
- <div class='ms-text'><p class='etikett'>Företaget</p><h3>Admin och CRM</h3><p>För företagets eget säljarbete finns en administrationsdel med ordrar, lag, ekonomi och ett CRM. CRM:et med att göra-lista, säljtratt och kundlista är i drift sedan november 2026.</p><p>Bilden visar nästa steg, de kalla listorna, som är byggda men inte släppta. Skolor och föreningar hämtas ur öppna register. En säljare tar en post och blir dess ägare, och då hamnar den i säljtratten.</p><p class='bildtext'>Skolorna i bilden är provdata.</p></div>
- <div class='ms-media'><figure><img class='skarm' src='bilder/webb-crm.png' alt='CRM med kalla listor filtrerade på län och skolform' width='1800' height='1031' loading='lazy' decoding='async'></figure></div>
-</article>
-
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 1, arkitektur</p><h3>En order är betald först när betalleverantören har sagt det</h3><p>I oktober gick jag igenom hela kedjan från säljarens order till lagets betalda beställning. Två fel låg i produktion. En beställning kunde markeras som lagd utan bekräftad betalning, och en avbruten kassa gick fortfarande att betala.</p><p>Jag valde bort att lita på att kunden kommer tillbaka från kassan. I stället bekräftar betalleverantörens egna händelser betalningen, och ett jobb stämmer av var femtonde minut. Granskaren stoppade rättelsen tre gånger innan den fick gå ut.</p></div>
- <div class='ms-media'><h4>Först</h4><ol class='steg gra'><li><span class='nr'>1</span><span>Kunden betalar</span></li><li><span class='nr'>2</span><span>Kunden skickas tillbaka</span></li><li><span class='nr'>3</span><span>Ordern markeras som lagd</span></li></ol><h4>Nu</h4><ol class='steg '><li><span class='nr'>1</span><span>Kassaförsöket sparas</span></li><li><span class='nr'>2</span><span>Leverantörens händelse tas emot</span></li><li><span class='nr'>3</span><span>Ordern blir betald</span></li></ol><p class='bildtext'>Avstämningen jämför våra ordrar med leverantörens var femtonde minut och larmar om något stannar.</p></div>
-</article>
-
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 2, design</p><h3>Kassans gröna fick bli mörkare</h3><p>Kassan hade en ljus grön toning med vit text. Knappen låg på 2,7 till 3,3:1 i kontrast och nästa stegs etikett på 1,6:1. Kravet i WCAG är 4,5:1.</p><p>Jag valde en mörkare grön, #15803d, som ger 5,0:1 för knappen, och lät ett prov mäta kontrasten bakom varje tecken i skärmbilder på fem bredder och med förstorad text. Rättelsen är i drift sedan 13 november.</p></div>
- <div class='ms-media'><div class='galleri fore-efter'><figure><img class='skarm' src='bilder/kassa-fore-topp.png' alt='Kassans sidhuvud före' width='512' height='308' loading='lazy' decoding='async'><figcaption>Före</figcaption></figure><figure><img class='skarm' src='bilder/kassa-efter-topp.png' alt='Kassans sidhuvud efter' width='512' height='308' loading='lazy' decoding='async'><figcaption>Efter</figcaption></figure><figure><img class='skarm' src='bilder/kassa-fore-knapp.png' alt='Kassans knapp före' width='512' height='318' loading='lazy' decoding='async'><figcaption>Före</figcaption></figure><figure><img class='skarm' src='bilder/kassa-efter-knapp.png' alt='Kassans knapp efter' width='512' height='318' loading='lazy' decoding='async'><figcaption>Efter</figcaption></figure></div></div>
-</article>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört. I drift på klubbforsaljning.se.</dd></div><div><dt>Min del</dt><dd>Samma roll som i appen, plus besluten om betalningar och avtal. Databasens grund, tabellerna och behörigheterna, satte jag upp för hand. Senare ändringar skrevs som migrationer av agenterna, och dem har jag granskat och kört.</dd></div></dl>
   </div>
+  <div class='skarmram stor'><img class='skarm' src='bilder/webb-start.png' alt='Startsidan på klubbforsaljning.se' width='1440' height='470' loading='lazy' decoding='async'></div><div class='galleri tva-bilder'><figure><img class='skarm' src='bilder/webb-kassa.png' alt='Kassan med beställningsöversikten' width='1280' height='900' loading='lazy' decoding='async'><figcaption><b>Kassan.</b> Räknar om sålda varor till hela kartonger.</figcaption></figure><figure><img class='skarm' src='bilder/webb-panel.png' alt='Säljmaterialet i lagledarens panel' width='1280' height='900' loading='lazy' decoding='async'><figcaption><b>Lagledarens panel.</b> Provlaget är påhittat.</figcaption></figure></div>
+  <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, arkitektur</p><h3>En order är betald först när betalleverantören har sagt det</h3><p>I oktober hittade jag att en beställning kunde markeras som lagd utan bekräftad betalning. Nu bekräftar leverantörens egna händelser betalningen, och ett jobb stämmer av var femtonde minut.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, design</p><h3>Kassans gröna fick bli mörkare</h3><p>Knappen i kassan hade 2,7 till 3,3:1 i kontrast, och WCAG kräver 4,5:1. Jag valde en mörkare grön som ger 5,0:1.</p></article></div>
  </div>
 </section>
 
@@ -344,48 +324,15 @@ figure.meny{margin-top:1rem}
  <div class='wrap'>
   <div class='tva intro'>
    <div>
-    <p class='etikett'>Projekt 3</p>
+    <p class='etikett'>Projekt 3 <span class='status pagar'>Pågående</span></p>
     <h2>Klubbhantering</h2>
-    <p class='lead'>Ett system för idrottsföreningar: medlemsregister, lag, kallelser med svar i realtid, kalender, närvaro, fakturor och föreningens egen hemsida.</p>
+    <p class='teknik'>Next.js · tRPC · Expo · Drizzle · Supabase</p>
+    <p>Klubbhantering är ett system för idrottsföreningar: medlemsregister, lag, kallelser med svar i realtid, närvaro, fakturor och föreningens egen hemsida. Ledaren bekräftar närvaron, och föreningen laddar ner underlaget för LOK-stöd. Appen provas på riktiga Android-telefoner och är inte inskickad än.</p>
    </div>
-   <dl class='fakta'><div><dt>Teknik</dt><dd>Next.js och tRPC på webben, Expo i appen, Drizzle och Postgres hos Supabase i ett gemensamt monorepo.</dd></div><div><dt>Ute</dt><dd>Webben på klubbhantering.se sedan 4 oktober 2026. Appen provas på riktiga Android-telefoner och är inte inskickad än.</dd></div><div><dt>Min del</dt><dd>Samma roll som i Klubbförsäljnings app.</dd></div></dl>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Pågående projekt. Webben är i drift på klubbhantering.se sedan oktober 2026, och appen är under utveckling.</dd></div><div><dt>Min del</dt><dd>Krav och flöden, granskning av agenterna och prov på riktiga telefoner.</dd></div></dl>
   </div>
-  <div class='skarmram stor'><figure><img class='skarm' src='bilder/kh-start.png' alt='Startsidan på klubbhantering.se' width='1800' height='975' loading='lazy' decoding='async'><figcaption>Startsidan. Föreningen i exemplet är påhittad.</figcaption></figure></div>
-
-  <h3 class='underrubrik'>Föreningen i webben och i appen</h3>
-  <div class='galleri kh-vyer'>
-   <figure class='bred'><img class='skarm' src='bilder/kh-lok.png' alt='Närvaro och underlag för LOK-stöd' width='1280' height='800' loading='lazy' decoding='async'><figcaption><b>Närvaro och LOK-stöd.</b> Ledaren bekräftar sammankomsterna, och föreningen laddar ner underlaget till idrottsrörelsens system och en fil till kommunen.</figcaption></figure>
-   <figure><img class='tel' src='bilder/kh-mobil.png' alt='Startsidan i mobilen' width='393' height='800' loading='lazy' decoding='async'><figcaption><b>Mobilwebben.</b></figcaption></figure>
-   <figure><img class='tel' src='bilder/kh-app-hem.png' alt='Appens hemvy' width='848' height='1920' loading='lazy' decoding='async'><figcaption><b>Appen.</b> Hem med flikrad, provkonto på riktig Android.</figcaption></figure>
-   <figure><img class='tel' src='bilder/kh-app-kort.png' alt='Digitalt medlemskort' width='848' height='1920' loading='lazy' decoding='async'><figcaption><b>Medlemskort.</b></figcaption></figure>
-  </div>
-
-  <div class='milstolpar'>
-  <article class='kort'>
-   <p class='etikett'>Milstolpe 1 och 2, design</p>
-   <h3>Menyn ska säga vem funktionen är till för</h3>
-   <div class='tva jamn'>
-    <div>
-     <div class='galleri tva-bilder'>
-      <figure><img class='skarm' src='bilder/kh-funk-fore.png' alt='Sidhuvudet före' width='1800' height='1004' loading='lazy' decoding='async'><figcaption>Före: Funktioner var en vanlig länk.</figcaption></figure>
-      <figure><img class='skarm' src='bilder/kh-funk-efter.png' alt='Sidhuvudet efter' width='1800' height='1004' loading='lazy' decoding='async'><figcaption>Efter: en meny per roll.</figcaption></figure>
-     </div>
-     <p>Jag valde en meny som delar upp funktionerna efter kassören, ledaren, föräldern och styrelsen. Den är byggd med details, stängs med Esc och vid klick utanför och gjorde sidan bara 1&nbsp;kB tyngre.</p>
-    </div>
-    <div>
-     <h4>Bottenmenyn i mobilen</h4>
-     <p>En ändring lät etiketterna radbrytas, och då hamnade Meddelanden på två rader på vanliga telefoner. Granskaren underkände den.</p>
-     <figure class='meny'><img class='skarm' src='bilder/kh-meny-fore.png' alt='Bottenmenyn före' width='393' height='110' loading='lazy' decoding='async'><figcaption>Före: Meddelanden bryts.</figcaption></figure>
-     <figure class='meny'><img class='skarm' src='bilder/kh-meny-efter.png' alt='Bottenmenyn efter' width='393' height='110' loading='lazy' decoding='async'><figcaption>Efter: en rad, brytning bara vid förstorad text.</figcaption></figure>
-    </div>
-   </div>
-  </article>
-
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 3, teknikval</p><h3>Inställningarna fick en egen plats i navigeringen</h3><p>Kugghjulet på Hem svarade inte i appen. Orsaken var samma ändring i expo-router 58 som gav felet i Klubbförsäljnings version 1.0.4.</p><p>Alternativen var att göra Inställningar till en dold flik, som i Klubbförsäljning, eller att flytta den till appens rotnavigering. Jag valde rotnavigeringen. En dold flik hade gett fel bakåtsteg på Android och en felaktig flikrad på surfplattor, och vyn var redan byggd som en detaljvy.</p><p>Ett nytt prov kör routern i Node och fäller den gamla koden.</p></div>
- <div class='ms-media'><div class='galleri tel-par'><figure><img class='tel' src='bilder/kh-kugg-fore.png' alt='Hem där kugghjulet inte svarade' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Före: kugghjulet uppe till höger leder ingenstans.</figcaption></figure><figure><img class='tel' src='bilder/kh-inst-efter.png' alt='Inställningarna öppnas' width='880' height='1920' loading='lazy' decoding='async'><figcaption>Efter: Inställningar öppnas. Kontots adress är dold.</figcaption></figure></div></div>
-</article>
-  </div>
+  <div class='kh-bilder'><div class='skarmram stor'><figure><img class='skarm' src='bilder/kh-start.png' alt='Startsidan på klubbhantering.se' width='1800' height='975' loading='lazy' decoding='async'><figcaption>Föreningen i exemplet är påhittad.</figcaption></figure></div><div class='galleri kh-vyer'><figure><img class='skarm' src='bilder/kh-lok.png' alt='Närvaro och underlag för LOK-stöd' width='1280' height='800' loading='lazy' decoding='async'><figcaption><b>Närvaro och LOK-stöd.</b></figcaption></figure><figure><img class='tel' src='bilder/kh-app-hem.png' alt='Appens hemvy' width='848' height='1920' loading='lazy' decoding='async'><figcaption><b>Appen.</b> Provkonto på riktig Android.</figcaption></figure></div></div>
+  <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, design</p><h3>Menyn säger vem funktionen är till för</h3><p>Jag delade upp funktionerna efter kassören, ledaren, föräldern och styrelsen. Menyn är byggd med details och gjorde sidan bara 1&nbsp;kB tyngre.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, teknikval</p><h3>Inställningarna fick en egen plats i navigeringen</h3><p>Samma ändring i expo-router 58 som gav felet i version 1.0.4 gjorde att kugghjulet på Hem inte svarade. Jag flyttade Inställningar till rotnavigeringen, eftersom en dold flik ger fel bakåtsteg.</p></article></div>
  </div>
 </section>
 
@@ -394,24 +341,15 @@ figure.meny{margin-top:1rem}
  <div class='wrap'>
   <div class='tva intro'>
    <div>
-    <p class='etikett'>Projekt 4</p>
+    <p class='etikett'>Projekt 4 <span class='status klar'>Slutfört</span></p>
     <h2>Nästa pass</h2>
-    <p class='lead'>En Android-app i Kotlin och Jetpack Compose där spelare och föräldrar svarar på lagets träningar, även utan nät. Byggd 16 till 17 november 2026 och är mitt examensarbete.</p>
-    <dl class='fakta'><div><dt>Teknik</dt><dd>Kotlin och Jetpack Compose, Room som lokal databas, WorkManager för att skicka svaren och en widget i Glance.</dd></div><div><dt>Min del</dt><dd>Samma roll som i de andra projekten.</dd></div><div><dt>Provat</dt><dd>Appen är provad med 37 prov i JVM:en på datorn. Provet på riktig telefon görs före redovisningen den 24 november.</dd></div></dl>
+    <p class='teknik'>Kotlin · Jetpack Compose · Room · WorkManager · Glance</p>
+    <p>Nästa pass är mitt examensarbete, en Android-app där spelare och föräldrar svarar på lagets träningar, även utan nät. Svaret sparas först i telefonen och skickas när nätet är tillbaka, och en widget visar nästa pass på hemskärmen. Appen är provad med 37 prov i JVM:en, och provet på riktig telefon görs före redovisningen den 24 november.</p>
    </div>
-   <div class='np-bild'><figure><img class='tel' src='bilder/np-utan-nat.png' alt='Nästa pass utan nät: svaret Kommer är sparat och skickas när nätet är tillbaka' width='640' height='1386' loading='lazy' decoding='async'><figcaption><b>Utan nät.</b> Svaret sparas i telefonen. Bilden är ritad ur appens kod i provmiljön, inte tagen på en telefon. Laget är provdata.</figcaption></figure></div>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört, byggt 16 till 17 november 2026.</dd></div><div><dt>Min del</dt><dd>Krav och arkitektur, till exempel att svaret alltid sparas lokalt först, och granskning av agenterna.</dd></div></dl>
   </div>
-  <div class='milstolpar'>
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 1, teknikval</p><h3>Svarstabellen är också kön</h3><p>Alternativet var en egen kötabell med en rad per tryck. Jag valde en rad per pass som skrivs över, så att bara det senaste svaret kan skickas.</p></div>
- <div class='ms-media'><figure><img class='skarm' src='bilder/np-widget.png' alt='Widgeten för Nästa pass utan nät: svaret Kommer är valt och raden under säger Sparat, skickas när nätet är tillbaka' width='1056' height='636' loading='lazy' decoding='async'><figcaption>Widgeten utan nät. Bilden är ritad ur appens kod i provmiljön, inte tagen på en telefon.</figcaption></figure></div>
-</article>
-
-  <article class='kort milstolpe '>
- <div class='ms-text'><p class='etikett'>Milstolpe 2, ett misstag</p><h3>Widgetens statusrad klipptes bort</h3><p>Det hände i den första bilden av widgeten, fast proven var gröna. Rättelsen blev två storlekar, och båda fotas nu.</p></div>
- <div class='ms-media'><figure><img class='skarm' src='bilder/np-widget-kompakt.png' alt='Den kompakta widgeten utan nät, med tid och plats på en rad och statusraden synlig' width='1056' height='441' loading='lazy' decoding='async'><figcaption>Den kompakta storleken, där statusraden får plats. Ritad i provmiljön, inte på en telefon.</figcaption></figure></div>
-</article>
-  </div>
+  <div class='galleri np-bilder'><figure><img class='tel' src='bilder/np-utan-nat.png' alt='Nästa pass utan nät: svaret Kommer är sparat och skickas när nätet är tillbaka' width='640' height='1386' loading='lazy' decoding='async'><figcaption><b>Utan nät.</b></figcaption></figure><figure><img class='skarm' src='bilder/np-widget.png' alt='Widgeten för Nästa pass utan nät, med svaret Kommer valt' width='1056' height='636' loading='lazy' decoding='async'><figcaption><b>Widgeten.</b> Bilderna är ritade ur appens kod i provmiljön, inte tagna på en telefon.</figcaption></figure></div>
+  <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, teknikval</p><h3>Svarstabellen är också kön</h3><p>Alternativet var en egen kötabell med en rad per tryck. Jag valde en rad per pass som skrivs över, så att bara det senaste svaret skickas.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, ett misstag</p><h3>Widgetens statusrad klipptes bort</h3><p>Det syntes i den första bilden av widgeten, fast proven var gröna. Rättelsen blev två storlekar, och proven tar nu en bild av båda.</p></article></div>
  </div>
 </section>
 
@@ -420,7 +358,7 @@ figure.meny{margin-top:1rem}
  <div class='wrap'>
   <div class='slutpanel'>
    <h2>Det jag tar med mig</h2>
-   <p class='lead'>Klart är det först när jag har sett beviset på en riktig skärm. Den som granskar ska inte ha sett hur koden kom till. Och varje misstag ska lämna en skriven regel efter sig, så att nästa släpp går lugnare än det förra.</p>
+   <p class='lead'>Klart är det först när jag har sett beviset på en riktig skärm, och varje misstag ska lämna en skriven regel efter sig.</p>
    <div class='lankar'>
     <div><h3>Klubbförsäljning</h3><p><a class='lank' href='https://klubbforsaljning.se'>klubbforsaljning.se</a><br>App Store och Google Play</p></div>
     <div><h3>Klubbhantering</h3><p><a class='lank' href='https://klubbhantering.se'>klubbhantering.se</a></p></div>
@@ -432,7 +370,7 @@ figure.meny{margin-top:1rem}
 </main>
 
 <footer class='fot'>
- <div class='wrap fot-rad'><span>Carlo Juric, portfolio 2026</span><span>Programmering iPhone och Android, Malmö Yrkeshögskola</span></div>
+ <div class='wrap fot-rad'><span>Carlo Juric, portfolio 2026</span></div>
 </footer>
 
 </body>
