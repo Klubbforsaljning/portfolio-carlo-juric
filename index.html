@@ -5,6 +5,7 @@
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Carlo Juric, portfolio</title>
 <meta name='description' content='Carlo Juric. Portfolio med fyra projekt: Klubbförsäljnings mobilapp och webbapp, Klubbhantering och Nästa pass.'>
+<meta name='author' content='Carlo Juric'>
 <meta name='theme-color' content='#16a34a'>
 <link rel='preload' as='font' type='font/woff2' href='typsnitt/plus-jakarta-sans-latin.woff2' crossorigin>
 <style>
@@ -212,7 +213,10 @@ ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);b
  .skarmram.stor{max-width:66%}
  .kh-bilder{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
  .kh-bilder .kh-vyer,#projekt-3 .skarmram.stor{max-width:none}
- #projekt-2 .tva-bilder{max-width:60%}
+ #projekt-2 .tva-bilder{max-width:50%}
+ #projekt-2 .skarmram.stor{max-width:54%}
+ #projekt-2 .intro dl.fakta{grid-template-columns:1fr 2.2fr}
+ .intro dl.fakta div{align-content:start}
  ul.taggar{gap:.3rem;margin-top:.5rem}
  ul.taggar li{font-size:8pt;padding:.12rem .55rem}
  .komp .kort{padding:.7rem .9rem}
@@ -270,7 +274,7 @@ ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);b
    <p class='bricka'>Portfolio</p>
    <h1>Carlo Juric</h1>
    <p class='lead'>Jag bygger appar och webbtjänster för föreningslivet. Här finns fyra projekt, från app och webb i drift till mitt examensarbete i Kotlin.</p>
-   <p>Jag har arbetat ensam, med AI-kodagenter som har skrivit det mesta av koden medan jag har stått för kraven, arkitekturen, granskningen och proven på riktiga telefoner. I Klubbförsäljning satte jag upp databasens grund, tabellerna och behörigheterna (Row Level Security), för hand, och vägledning har jag fått från API-dokumentationen, Stack Overflow och AI-verktygen.</p>
+   <p>Jag har arbetat ensam. I Klubbförsäljning byggde jag backend, databasen och behörigheterna (Row Level Security), och från maj har AI-kodagenter skrivit en stor del av frontend och de senare ändringarna. I Klubbhantering och Nästa pass har de skrivit det mesta av koden. Jag har stått för kraven, arkitekturen, granskningen och proven på riktiga telefoner, och ingenting har publicerats utan mitt godkännande.</p>
    <p class='meta'>Programmering iPhone och Android, Malmö Yrkeshögskola. Examen 24 november 2026.</p>
    <div class='knappar'>
     <a class='knapp knapp-gron' href='#projekt-1'>Se projekten</a>
@@ -312,7 +316,7 @@ ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);b
     <p class='teknik'>React · TypeScript · Vite · Supabase · Edge Functions i Deno</p>
     <p>Webben är den publika webbplatsen, lagledarens panel, säljarnas vyer och kassan. Där finns också KLUBB|pay, där kundernas Swish går till föreningens eget konto, och ett CRM för företaget. Webben finns på svenska, engelska och danska.</p>
    </div>
-   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört. I drift på klubbforsaljning.se.</dd></div><div><dt>Min del</dt><dd>Samma roll som i appen, plus besluten om betalningar och avtal. Databasens grund, tabellerna och behörigheterna, satte jag upp för hand. Senare ändringar skrevs som migrationer av agenterna, och dem har jag granskat och kört.</dd></div></dl>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört. I drift på klubbforsaljning.se.</dd></div><div><dt>Min del</dt><dd>Webben började som en prototyp i Figma Make. I mars 2026 flyttade jag den till ett eget projekt med git och byggde backend, databasens tabeller, behörigheterna och säkerheten kring dem, med API-dokumentationen, Stack Overflow och GitHub Copilot som stöd. Från maj skrev agenterna en stor del av frontend och senare ändringar i backend. Jag granskade och godkände allt före publicering och fattade besluten om betalningar och avtal.</dd></div></dl>
   </div>
   <div class='skarmram stor'><img class='skarm' src='bilder/webb-start.png' alt='Startsidan på klubbforsaljning.se' width='1440' height='470' loading='lazy' decoding='async'></div><div class='galleri tva-bilder'><figure><img class='skarm' src='bilder/webb-kassa.png' alt='Kassan med beställningsöversikten' width='1280' height='900' loading='lazy' decoding='async'><figcaption><b>Kassan.</b> Räknar om sålda varor till hela kartonger.</figcaption></figure><figure><img class='skarm' src='bilder/webb-panel.png' alt='Säljmaterialet i lagledarens panel' width='1280' height='900' loading='lazy' decoding='async'><figcaption><b>Lagledarens panel.</b> Provlaget är påhittat.</figcaption></figure></div>
   <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, arkitektur</p><h3>En order är betald först när betalleverantören har sagt det</h3><p>I oktober hittade jag att en beställning kunde markeras som lagd utan bekräftad betalning. Nu bekräftar leverantörens egna händelser betalningen, och ett jobb stämmer av var femtonde minut.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, design</p><h3>Kassans gröna fick bli mörkare</h3><p>Knappen i kassan hade 2,7 till 3,3:1 i kontrast, och WCAG kräver 4,5:1. Jag valde en mörkare grön som ger 5,0:1.</p></article></div>
