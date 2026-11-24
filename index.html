@@ -274,7 +274,7 @@ ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);b
    <p class='bricka'>Portfolio</p>
    <h1>Carlo Juric</h1>
    <p class='lead'>Jag bygger appar och webbtjänster för föreningslivet. Här finns fyra projekt, från app och webb i drift till mitt examensarbete i Kotlin.</p>
-   <p>Jag har arbetat ensam. I Klubbförsäljning byggde jag backend, databasen och behörigheterna (Row Level Security), och från maj har AI-kodagenter skrivit en stor del av frontend och de senare ändringarna. I Klubbhantering och Nästa pass har de skrivit det mesta av koden. Jag har stått för kraven, arkitekturen, granskningen och proven på riktiga telefoner, och ingenting har publicerats utan mitt godkännande.</p>
+   <p>Bolaget bakom Klubbförsäljning har fyra delägare, och utvecklingen i projekten här har jag lett. I Klubbförsäljning byggde jag backend, databasen och behörigheterna (Row Level Security), och från maj har AI-kodagenter skrivit en stor del av frontend och de senare ändringarna. I Klubbhantering och Nästa pass har de skrivit det mesta av koden. Jag har stått för kraven, arkitekturen och granskningen, och för apparna i drift proven på riktiga telefoner. Ingenting har publicerats utan mitt godkännande.</p>
    <p class='meta'>Programmering iPhone och Android, Malmö Yrkeshögskola. Examen 24 november 2026.</p>
    <div class='knappar'>
     <a class='knapp knapp-gron' href='#projekt-1'>Se projekten</a>
@@ -345,12 +345,12 @@ ul.taggar li{padding:.3rem .75rem;border-radius:9999px;background:var(--paper);b
  <div class='wrap'>
   <div class='tva intro'>
    <div>
-    <p class='etikett'>Projekt 4 <span class='status klar'>Slutfört</span></p>
+    <p class='etikett'>Projekt 4 <span class='status klar'>Examensarbete</span></p>
     <h2>Nästa pass</h2>
     <p class='teknik'>Kotlin · Jetpack Compose · Room · WorkManager · Glance</p>
-    <p>Nästa pass är mitt examensarbete, en Android-app där spelare och föräldrar svarar på lagets träningar, även utan nät. Svaret sparas först i telefonen och skickas när nätet är tillbaka, och en widget visar nästa pass på hemskärmen. Appen är provad med 37 prov i JVM:en, och provet på riktig telefon görs före redovisningen den 24 november.</p>
+    <p>Nästa pass är mitt examensarbete, en Android-app där spelare och föräldrar svarar på lagets träningar, även utan nät. Svaret sparas först i telefonen och skickas när nätet är tillbaka, och en widget visar nästa pass på hemskärmen. Appen är provad med 37 prov i JVM:en och den 23 november på en Pixel 9 i molntjänsten TestingBot, där ett svar som gavs utan nät skickades när nätet kom tillbaka.</p>
    </div>
-   <dl class='fakta'><div><dt>Läge</dt><dd>Slutfört, byggt 16 till 17 november 2026.</dd></div><div><dt>Min del</dt><dd>Krav och arkitektur, till exempel att svaret alltid sparas lokalt först, och granskning av agenterna.</dd></div></dl>
+   <dl class='fakta'><div><dt>Läge</dt><dd>Inlämnat som examensarbete. Byggt 16 till 17 november 2026, provat på telefon 23 november.</dd></div><div><dt>Min del</dt><dd>Krav och arkitektur, till exempel att svaret alltid sparas lokalt först, och granskning av agenterna.</dd></div></dl>
   </div>
   <div class='galleri np-bilder'><figure><img class='tel' src='bilder/np-utan-nat.png' alt='Nästa pass utan nät: svaret Kommer är sparat och skickas när nätet är tillbaka' width='640' height='1386' loading='lazy' decoding='async'><figcaption><b>Utan nät.</b></figcaption></figure><figure><img class='skarm' src='bilder/np-widget.png' alt='Widgeten för Nästa pass utan nät, med svaret Kommer valt' width='1056' height='636' loading='lazy' decoding='async'><figcaption><b>Widgeten.</b> Bilderna är ritade ur appens kod i provmiljön, inte tagna på en telefon.</figcaption></figure></div>
   <div class='ms-par'><article class='kort ms'><p class='etikett'>Milstolpe 1, teknikval</p><h3>Svarstabellen är också kön</h3><p>Alternativet var en egen kötabell med en rad per tryck. Jag valde en rad per pass som skrivs över, så att bara det senaste svaret skickas.</p></article><article class='kort ms'><p class='etikett'>Milstolpe 2, ett misstag</p><h3>Widgetens statusrad klipptes bort</h3><p>Det syntes i den första bilden av widgeten, fast proven var gröna. Rättelsen blev två storlekar, och proven tar nu en bild av båda.</p></article></div>
